@@ -1,0 +1,92 @@
+// Mixin
+@mixin button($param) {
+  text-decoration: none;
+  background: honeydew;
+  border-radius: 4px;
+  padding: 10px;
+  color: blue;
+
+  @if ($param == 'main') {
+    display: inline-block;
+    margin: 5px 0 0 7px;
+  } @else {
+    display: flex;
+    justify-content: center;
+    margin: 10px auto;
+    width: 15%;
+  }
+}
+
+.weather {
+  background: #4CAF50;
+  position: relative;
+  text-align: center;
+  border-radius: 20px;
+  width: 500px;
+  margin: 10px auto;
+  padding: 10px 0;
+
+  .image {
+    width: 40px;
+    height: 30px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .image_text_block {
+    display: inline-flex;
+    padding-bottom: 10px;
+
+    .text {
+      font-size: 18px;
+      padding: 5px 0 0 5px;
+      color: antiquewhite;
+    }
+  }
+
+  .visibility {
+    padding-bottom: 50px;
+  }
+
+  .temp {
+    position: absolute;
+    bottom: 0;
+    font-size: 40px;
+    display: inline-flex;
+    left: 45%;
+
+    .degree {
+      font-size: 12px;
+      padding-top: 10px;
+    }
+  }
+
+  .current_date_time {
+    padding-bottom: 10px;
+  }
+
+  .humidity {
+    padding-bottom: 10px;
+  }
+
+  .right_now {
+    margin: 0;
+    padding: 10px 0 10px 0;
+  }
+}
+
+.daily {
+  @include button('daily');
+}
+
+.main-page-btn {
+  @include button('main');
+}
+
+body {
+  background: hotpink;
+}
