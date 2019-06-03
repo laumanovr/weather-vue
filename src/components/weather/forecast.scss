@@ -1,0 +1,25 @@
+.city {
+  text-align: center;
+  color: lavenderblush;
+}
+
+.tabs {
+  text-align: right;
+  margin: 20px 50px 0 0;
+
+  span {
+    margin-right: 15px;
+    cursor: pointer;
+
+    &.active {
+      background: royalblue;
+      border-radius: 3px;
+      padding: 5px;
+      color: #fff;
+    }
+  }
+}
+
+.header {
+  text-align: center;
+}
